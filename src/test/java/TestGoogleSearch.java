@@ -27,7 +27,7 @@ public class TestGoogleSearch {
     @Test(priority = 2)
     void googleTest2() {
         driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"))
-                .sendKeys("Test 2");
+                .sendKeys("Google Search Test");
         driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")).click();
         System.out.println(driver.getTitle());
     }

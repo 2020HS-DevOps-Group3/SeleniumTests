@@ -27,7 +27,7 @@ public class ExcludingTheseTests {
     @Test(priority = 2)
     void googleTest() {
         driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"))
-                .sendKeys("Hello World");
+                .sendKeys("This shouldn't have executed");
         driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")).click();
         System.out.println(driver.getTitle());
     }
