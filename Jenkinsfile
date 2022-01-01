@@ -11,13 +11,13 @@ pipeline {
     stage("build") {
       steps {
         echo 'building the project...'
-        sh "mvn clean install"
+        sh "mvn clean compile"
       }
     }
     
     stage("test") {
       steps {
-        echo 'mvn test -DsuiteXmlFile=testng.xml'
+        sh 'mvn test -DsuiteXmlFile=testng.xml'
       }
     }
 
