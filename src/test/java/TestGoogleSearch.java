@@ -8,7 +8,7 @@ import java.io.File;
 import java.time.Duration;
 
 @Slf4j
-public class TestGoogle2 {
+public class TestGoogleSearch {
 
     static WebDriver driver;
 

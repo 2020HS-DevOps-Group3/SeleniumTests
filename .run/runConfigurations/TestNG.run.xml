@@ -4,7 +4,7 @@
     <shortenClasspath name="NONE" />
     <option name="SUITE_NAME" value="" />
     <option name="PACKAGE_NAME" value="" />
-    <option name="MAIN_CLASS_NAME" value="TestGoogle" />
+    <option name="MAIN_CLASS_NAME" value="TestGoogleSearch" />
     <option name="GROUP_NAME" value="" />
     <option name="TEST_OBJECT" value="CLASS" />
     <option name="PARAMETERS" value="" />
