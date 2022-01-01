@@ -11,7 +11,7 @@ pipeline {
     stage("build") {
       steps {
         echo 'building the project...'
-        sh "mvn compile"
+        sh "mvn clean install"
       }
     }
     
