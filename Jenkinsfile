@@ -7,23 +7,22 @@ pipeline {
   }
   
   stages {
-    
-    stage("build") {
+    stage("Compilation Stage") {
       steps {
-        echo 'building the project...'
+        echo 'Compiling the project...'
         sh "mvn clean compile"
       }
     }
     
-    stage("test") {
+    stage("Testing Stage") {
       steps {
         sh 'mvn test -DsuiteXmlFile=testng.xml'
       }
     }
 
-    stage("deploy") {
+    stage('Acceptance Stage') {
       steps {
-        echo 'deploying the project...'
+        input 'Approved ?'
       }
     }
   }
