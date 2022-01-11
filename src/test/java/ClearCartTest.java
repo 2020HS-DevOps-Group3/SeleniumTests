@@ -8,7 +8,7 @@ import java.io.File;
 import java.time.Duration;
 
 @Slf4j
-public class ExcludingTheseTests {
+public class TestGoogleSearch {
 
     static WebDriver driver;
 
@@ -20,15 +20,14 @@ public class ExcludingTheseTests {
         log.info("chrome driver: {}" + absolutePath);
         System.setProperty("webdriver.chrome.driver", absolutePath);
         driver = new ChromeDriver();
-        driver.get("https://google.com");
+        driver.get("http://localhost:4200/");
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(2));
     }
 
     @Test(priority = 2)
-    void googleTest() {
-        driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"))
-                .sendKeys("This shouldn't have executed");
-        driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")).click();
+    void googleTest2() {
+        boolean isDisplayed = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]")).isDisplayed();
+        Assert.assertEquals(0, isDisplayed);
         System.out.println(driver.getTitle());
     }
 

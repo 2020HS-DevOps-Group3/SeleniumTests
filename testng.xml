@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Google Test Suite">
-    <test verbose="2" preserve-order="true" name="Test Google Search">
+<suite name="DevOps Project Selenium Test Suite">
+    <test verbose="2" preserve-order="true" name="Test Angular UI Service">
         <classes>
-            <class name="TestGoogleSearch"></class>
+            <class name="AddToCartTest"></class>
+            <class name="ClearCartTest"></class>
+            <class name="LaunchTest"></class>
+            <class name="OrderProductTest"></class>
         </classes>
     </test>
 </suite>
